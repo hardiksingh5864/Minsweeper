@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <style>
+        #gameBoard {
+            display: grid;
+            grid-template-columns: repeat(10, 30px);
+            grid-template-rows: repeat(10, 30px);
+            gap: 2px;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .cell.revealed {
+            background-color: white;
+            cursor: default;
+        }
+        .cell.mine {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minesweeper</h1>
+    <div id="gameBoard"></div>
+    <script src="app.js"></script>
+</body>
+</html>
